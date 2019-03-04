@@ -1,2 +1,1 @@
-# foondation-javascript
-FOOndation JavaScript
+# FOOndation - Simple Application Foundation Architecture #

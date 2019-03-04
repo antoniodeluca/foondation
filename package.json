@@ -1,0 +1,60 @@
+{
+  "author": "Antonio De Luca <contact@antoniodeluca.info>",
+  "dependencies": {
+    "@babel/polyfill": "^7.0.0"
+  },
+  "description": "FOOndation - Simple Application Foundation Architecture",
+  "devDependencies": {
+    "@babel/cli": "^7.0.0",
+    "@babel/core": "^7.0.0",
+    "@babel/preset-env": "^7.0.0",
+    "@babel/register": "^7.0.0",
+    "babelify": "^10.0.0",
+    "browserify": "^16.2.3",
+    "chai": "^4.2.0",
+    "eslint": "^5.7.0",
+    "gulp": "^4.0.0",
+    "gulp-babel": "^8.0.0",
+    "gulp-buffer": "0.0.2",
+    "gulp-clean": "^0.4.0",
+    "gulp-tap": "^1.0.1",
+    "gulp-uglify": "^3.0.1",
+    "karma": "^3.0.0",
+    "karma-browserify": "^5.0.5",
+    "karma-chrome-launcher": "^2.2.0",
+    "karma-firefox-launcher": "^1.1.0",
+    "karma-mocha": "^1.3.0",
+    "karma-mocha-reporter": "^2.2.5",
+    "mocha": "^5.2.0",
+    "npm-run-all": "^4.1.3",
+    "onchange": "^5.1.1"
+  },
+  "license": "MIT",
+  "main": "distributed/index.js",
+  "name": "foondation",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/antoniodeluca/foondation.js.git"
+  },
+  "scripts": {
+    "build": "npm run build:production",
+    "build:development": "npx gulp build-for-development",
+    "build:production": "npx gulp build-for-production",
+    "build:testing": "npx gulp build-for-testing",
+    "lint": "npx eslint ./assets/**/*.js",
+    "test": "npx npm-run-all lint --serial test:*",
+    "test:browser": "npx karma start",
+    "test:browser:integration": "npx karma start karma.conf.integration.js",
+    "test:browser:system": "npx karma start karma.conf.system.js",
+    "test:browser:unit": "npx karma start karma.conf.unit.js",
+    "test:node": "npx mocha --require @babel/register --recursive ./tests",
+    "test:node:integration": "npx mocha --require @babel/register --recursive ./tests/integration",
+    "test:node:system": "npx mocha --require @babel/register --recursive ./tests/system",
+    "test:node:unit": "npx mocha --require @babel/register --recursive ./tests/unit",
+    "watch": "npm run watch:production",
+    "watch:development": "npx onchange assets/*.html assets/**/*.html assets/*.css assets/**/*.css assets/*.js assets/**/*.js -- npm run build:development",
+    "watch:production": "npx onchange assets/*.html assets/**/*.html assets/*.css assets/**/*.css assets/*.js assets/**/*.js -- npm run build:production",
+    "watch:testing": "npx onchange assets/*.html assets/**/*.html assets/*.css assets/**/*.css assets/*.js assets/**/*.js -- npm run build:testing"
+  },
+  "version": "0.0.0"
+}

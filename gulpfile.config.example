@@ -1,0 +1,5 @@
+const exportedName = 'application';
+
+export {
+    exportedName
+};
