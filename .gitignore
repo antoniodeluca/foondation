@@ -1,5 +1,6 @@
 /built
 /bundled
 /minified
+/node_modules
 /transpiled
 gulpfile.config.js
