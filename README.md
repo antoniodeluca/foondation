@@ -1,1 +1,1 @@
-# FOOndation - Simple Application Foundation Architecture #
+# FOOndation - Application Architecture #
