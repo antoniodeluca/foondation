@@ -1,1 +1,3 @@
-# FOOndation - Application Architecture (JavaScript)
+# FOOndation (JavaScript) #
+
+## Application Architecture (JavaScript) ##
